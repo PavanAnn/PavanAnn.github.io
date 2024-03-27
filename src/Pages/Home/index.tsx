@@ -13,7 +13,7 @@ const Home: React.FC = () => {
     while (true) {
       let firstDigit = Math.floor(1 + Math.random() * 5);
       let randomId = firstDigit * 10000 + Math.floor(Math.random() * 10000); 
-      const apiUrl = `${corsAnywhereUrl}https://api.myanimelist.net/v2/anime/${randomId}`;
+      const apiUrl = `https://api.myanimelist.net/v2/anime/${randomId}`;
       try {
         const res = await axios.get(apiUrl, {
           headers: {
