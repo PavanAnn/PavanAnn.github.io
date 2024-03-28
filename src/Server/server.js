@@ -1,7 +1,7 @@
 const corsAnywhere = require('cors-anywhere');
 
 const host = 'localhost';
-const port = 3000;
+const port = 8000;
 
 corsAnywhere.createServer({
   originWhitelist: [], 
