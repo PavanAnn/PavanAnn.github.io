@@ -24,7 +24,7 @@ const Home: React.FC = () => {
 
   async function getAnimeList() {
     setLoadingList(true);
-    const apiUrl = `${corsAnywhereUrl}https://api.myanimelist.net/v2/anime/ranking?ranking_type=all&limit=100`;
+    const apiUrl = `https://extreme-height-419117.rj.r.appspot.com/anime/ranking?ranking_type=all&limit=100`;
     try {
       const res = await axios.get(apiUrl, {
         headers: {
