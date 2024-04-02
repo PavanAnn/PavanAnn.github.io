@@ -15,12 +15,6 @@ export interface CustomBrandingFonts {
    fontBody: AVAILABLE_FONTS;
 }
 
-export interface CustomBrandingColors {
-   backgroundColorHeader: string;
-   backgroundColorBody: string;
-   backgroundColorFooter: string;
-}
-
 export interface CustomBrandingButtons {
    buttonColorPrimaryFill: string;
    buttonColorPrimaryText: string;
@@ -31,7 +25,6 @@ export interface CustomBrandingButtons {
 export interface CustomBranding
    extends CustomBrandingImages,
       CustomBrandingFonts,
-      CustomBrandingColors,
       CustomBrandingButtons {}
 
 export default function getCustomBranding(param: CustomBranding): Theme {
