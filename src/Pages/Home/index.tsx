@@ -27,7 +27,7 @@ const Home: React.FC = () => {
     try {
       const res = await axios.get(apiUrl, {
         headers: {
-          "X-MAL-CLIENT-ID": "09ca53e8e4f9cd4d40d8fafafb7285fb"
+          'X-MAL-CLIENT-ID': process.env.MAL_CLIENT_ID
         }
       });
       if (res.status === 200) {
