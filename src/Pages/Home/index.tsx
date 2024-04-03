@@ -5,7 +5,6 @@ import axios from 'axios';
 import { Divider, Checkbox, FormControlLabel, FormGroup, Typography } from '@mui/material';
 
 const Home: React.FC = () => {
-  const corsAnywhereUrl = window.location.hostname === 'localhost' ? 'http://localhost:8000/' : '';
   const [animeList, setAnimeList] = useState<any>();
   const [loadingList, setLoadingList] = useState(false);
   const [currentItemIndex, setCurrentItemIndex] = useState(0);
@@ -17,7 +16,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     getAnimeList();
   }, []);
-
+ 
   useEffect(() => {
     generateRandomCheckboxes();
   }, [animeList, currentItemIndex]);
@@ -52,7 +51,6 @@ const Home: React.FC = () => {
 
   const generateRandomCheckboxes = () => {
     if (animeList && animeList.length > 0) {
-      const randomIndexes = Array.from({ length: 5 }, (_, index) => index);
       const randomNames: string[] = [];
       const usedIndexes: number[] = [];
       while (randomNames.length < 4) {
