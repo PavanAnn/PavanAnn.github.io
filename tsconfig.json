@@ -21,6 +21,7 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src",
+    "src/assets" // Include the assets folder or specific image file paths here
   ]
 }
