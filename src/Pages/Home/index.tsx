@@ -23,7 +23,7 @@ const Home: React.FC = () => {
 
   async function getAnimeList() {
     setLoadingList(true);
-    const apiUrl = `https://extreme-height-419117.rj.r.appspot.com/anime/ranking?ranking_type=all&limit=100`;
+    const apiUrl = `https://extreme-height-419117.rj.r.appspot.com/anime/ranking?ranking_type=all&limit=5`;
     try {
       const res = await axios.get(apiUrl, {
         headers: {
@@ -49,8 +49,17 @@ const Home: React.FC = () => {
     return array;
   };
 
+  function mapList() {
+    animeList.map((item: any) => {
+      console.log(item.node.title)
+    }) 
+    console.log(currentItemIndex)
+  }
+
   const generateRandomCheckboxes = () => {
     if (animeList && animeList.length > 0) {
+
+      // length = 5
       const randomNames: string[] = [];
       const usedIndexes: number[] = [];
       while (randomNames.length < 4) {
@@ -88,7 +97,7 @@ const Home: React.FC = () => {
 
   return (
     <Container>
-      <WelcomeMessage onClick={() => console.log(currentItemIndex)}>Correct Guesses {'-> '} {points}</WelcomeMessage>
+      <WelcomeMessage onClick={() => mapList()}>Correct Guesses {'-> '} {points}</WelcomeMessage>
       <AuthButton onClick={getAnimeList}>Get Anime List</AuthButton>
       {loadingList ? (
         <CircularProgress style={{ marginTop: '60px' }} />
