@@ -8,9 +8,9 @@ import { DefaultTheme } from 'styled-components';
 
 const theme: DefaultTheme = {
   colors: {
-    primary: '#1976d2', // Main primary color
-    secondary: '#dc004e', // Main secondary color
-    background: '#f0f0f0', // Default background color
+    primary: '#fafafb', // Main primary color
+    secondary: '#010001', // Main secondary color
+    background: '#010001', // Default background color
   },
   typography: {
     fontFamily: 'Roboto, sans-serif', // Default font family
