@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import GlobalStyle from './Theme/globalStyle';
 import { CssBaseline } from '@mui/material';
 import { BrowserRouter } from 'react-router-dom';
@@ -17,8 +17,10 @@ const theme: DefaultTheme = {
   },
 };
 
-
 const App: React.FC = () => {
+  useEffect(() => {
+    document.title = 'Pavan Anime Quiz';
+  }, []); 
   return (
     <>
     <ThemeProvider theme={theme}>
