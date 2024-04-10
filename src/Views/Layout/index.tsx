@@ -1,19 +1,30 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { MainLayoutContainer, Container, ContentWrapper } from './styles';
+import { MouseTrail, StarField } from 'retro-react';
 
 
 const MainLayout = () => {
 
 
     return (
-        <MainLayoutContainer>
-            <Container>
-                <ContentWrapper>
+        <div style={{ position: 'relative', minHeight: '100vh' }}>
+            <StarField
+                style={{ height: '100vh' }}
+                numStars={100}
+                size={2}
+                speed={1}
+                starColor="white"
+            />
+            <MouseTrail
+    offset={{
+      x: 0,
+      y: 0
+    }}
+    particleColor="rainbow"
+    particleSize={10}
+  />
                 <Outlet />
-                </ContentWrapper>
-            </Container>
-      </MainLayoutContainer>
+      </div>
   );
 };
 

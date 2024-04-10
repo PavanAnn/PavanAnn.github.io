@@ -4,11 +4,15 @@ import { FormGroup, Checkbox, Typography } from '@mui/material';
 
 export const Container = styled.div`
   display: flex;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   flex-direction: column;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
   padding: 20px;
+  width: 80%;
 `;
 
 export const WelcomeMessage = styled.h1`
@@ -61,6 +65,7 @@ export const CheckboxGroup = styled(FormGroup)`
   justify-content: start;
   gap: 10px;
   margin-top: 20px;
+  min-width: 40px;
 `;
 
 export const CheckGrid = styled.div`

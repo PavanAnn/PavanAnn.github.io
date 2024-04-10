@@ -99,8 +99,8 @@ const Home: React.FC = () => {
   return (
     <Container onClick={() => uwu()}>
       <WelcomeMessage>Correct Guesses: {points}</WelcomeMessage>
-      <AuthButton onClick={getAnimeList} color='secondary'>Get Anime List</AuthButton>
-      {loadingList ? (
+{ /* <AuthButton onClick={getAnimeList} color='secondary'>Get Anime List</AuthButton> */}
+    {loadingList ? (
         <LoadingSpinner />
       ) : (animeList && currentItemIndex < animeList.length ? (
         <AnimeContainer key={animeList[currentItemIndex].node.id}>
